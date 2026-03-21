@@ -193,7 +193,7 @@
       "settings": { "foreground": "#005A5A" }
     },
     {
-      "scope": "statement.hypatia",
+      "scope": "phrase.hypatia",
       "settings": { "foreground": "#5A5A5A" }
     },
 

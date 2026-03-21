@@ -149,7 +149,7 @@
 
     {
       "scope": "dialect.hypatia",
-      "settings": { "foreground": "#CA00CA" }
+      "settings": { "foreground": "#CAA5F5" }
     },
     {
       "scope": "lingua.hypatia",
@@ -161,11 +161,11 @@
     },
     {
       "scope": "intervalla.hypatia",
-      "settings": { "foreground": "#FF5500" }
+      "settings": { "foreground": "#00FFAA" }
     },
     {
       "scope": "inclusores.hypatia",
-      "settings": { "foreground": "#00FFAA" }
+      "settings": { "foreground": "#FF5500" }
     },
     {
       "scope": "lexicon.hypatia",
@@ -173,28 +173,28 @@
     },
     {
       "scope": "mutabilia.hypatia",
-      "settings": { "foreground": "#AF55AF" }
+      "settings": { "foreground": "#CA00CA" }
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#0FF0A0" }
+      "settings": { "foreground": "#DCDCA0" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#0FF0A0" }
+      "settings": { "foreground": "#DCDCA0" }
     },
     {
-      "scope": "statement.hypatia",
+      "scope": "phrase.hypatia",
       "settings": { "foreground": "#A0F0A0" }
     },
 
     {
       "scope": "keyword.hypatia",
-      "settings": { "foreground": "#55ACD5", "fontStyle": "bold" }
+      "settings": { "foreground": "#559AD5", "fontStyle": "bold" }
     },
     {
       "scope": "string.hypatia",
-      "settings": { "foreground": "#AAAA00", "fontStyle": "italic" }
+      "settings": { "foreground": "#C05A0F", "fontStyle": "italic" }
     },
     {
       "scope": "comment.hypatia",
