@@ -149,15 +149,15 @@
 
     {
       "scope": "dialect.hypatia",
-      "settings": { "foreground": "#CAA5F5" }
+      "settings": { "foreground": "#CA00CA" }
     },
     {
       "scope": "lingua.hypatia",
-      "settings": { "foreground": "#DCDCA0" }
+      "settings": { "foreground": "#CAA5F5" }
     },
     {
       "scope": "alphabetum.hypatia",
-      "settings": { "foreground": "#55FF00" }
+      "settings": { "foreground": "#DDDDDD" }
     },
     {
       "scope": "intervalla.hypatia",
@@ -173,15 +173,15 @@
     },
     {
       "scope": "mutabilia.hypatia",
-      "settings": { "foreground": "#CA00CA" }
+      "settings": { "foreground": "#DCDCA0" }
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#DCDCA0" }
+      "settings": { "foreground": "#CAA5F5" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#DCDCA0" }
+      "settings": { "foreground": "#CAA5F5" }
     },
     {
       "scope": "phrase.hypatia",
