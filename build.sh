@@ -13,6 +13,9 @@
 
 ## Begin of file build.sh ##
 
+set -eu
+cd "$(dirname "$0")"
+
 echo
 echo "# Building the extension..."
 npx @vscode/vsce pack
