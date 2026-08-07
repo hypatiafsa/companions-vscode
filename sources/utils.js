@@ -12,12 +12,12 @@
 /**
  * Utility module for Hypatia VSCode extension.
  *
- * Provides comprehensive helper functions organized into categories:
+ * Provides comprehensive helper functions organised into categories:
  * - Configuration management (getting, inspecting, updating settings);
  * - GlobalState operations (reading/writing extension state);
  * - Editor helpers (document type, theme detection);
  * - Output logging (console logging, output channels with conditional tracing);
- * - General utilities (enum normalization, object validation, rule filtering,
+ * - General utilities (enum normalisation, object validation, rule filtering,
  *   serial task queue).
  *
  * @module utils
@@ -47,7 +47,7 @@ function cfg(section, scope) {
 }
 
 /**
- * Produces a stable, JSON-serializable key for a configuration scope. Converts
+ * Produces a stable, JSON-serialisable key for a configuration scope. Converts
  * Uri objects and scope objects with Uri properties to their string
  * representation for consistent comparison and storage.
  * @param {vscode.ConfigurationScope | null | undefined} scope - The
@@ -283,8 +283,8 @@ function makeConfigBasedTracer(context, configRoot, channelName, traceFlagName =
 // General helpers -------------------------------------------------------------
 
 /**
- * Normalizes an enum value by checking it against a list of allowed values.
- * @param {*} value - Value to normalize.
+ * Normalises an enum value by checking it against a list of allowed values.
+ * @param {*} value - Value to normalise.
  * @param {Array<any>} allowed - List of allowed values.
  * @param {*} fallback - Value to return if the input value is not allowed.
  * @returns {*} The original value if allowed, otherwise the fallback.

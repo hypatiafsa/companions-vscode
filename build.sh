@@ -13,7 +13,7 @@
 
 ## Begin of file build.sh ##
 
-set -eu
+set -euo pipefail
 cd "$(dirname "$0")"
 
 echo

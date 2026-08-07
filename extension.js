@@ -26,7 +26,6 @@ let hlsHandle = undefined;
  * @param {vscode.ExtensionContext} context - The extension context provided by
  * VSCode, used to manage subscriptions and resources
  * @returns {void}
- * @throws {Error} Errors are caught and logged via utils.logError()
  */
 export function activate(context) {
   try {
@@ -47,16 +46,24 @@ export function activate(context) {
  * Deactivates the extension and cleans up resources.
  * @returns {Promise<void>|undefined} A Promise if async disposal is performed,
  * undefined otherwise.
- * @throws {Error} Errors are caught and logged via utils.logError()
  */
 export async function deactivate() {
   const allHandles = [hlsHandle, styleHandle].filter(Boolean);
-  const asyncHandles = allHandles.filter(hnd => typeof hnd?.disposeAsync === "function");
+  const asyncHandles = allHandles.filter(
+    hnd => typeof hnd?.disposeAsync === "function"
+  );
   if (asyncHandles.length > 0) {
-    const results = await Promise.allSettled(asyncHandles.map(hnd => hnd.disposeAsync()));
-    results.forEach(rst => { if (rst.status === "rejected") utils.logError(rst.reason); });
+    const results = await Promise.allSettled(
+      asyncHandles.map(hnd => hnd.disposeAsync())
+    );
+    results.forEach(rst => {
+      if (rst.status === "rejected") {
+        utils.logError(rst.reason);
+      }
+    });
   }
   for (const hnd of allHandles) {
+    if (typeof hnd?.disposeAsync === "function") continue;
     try {
       if (typeof hnd?.dispose === "function") hnd.dispose();
     } catch (err) {

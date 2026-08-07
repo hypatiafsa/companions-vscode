@@ -1,10 +1,10 @@
-# Hypatia-VSCode Todo
+# Hypatia-VSCode To Do
 
 List of tasks to be completed for the Hypatia-VSCode language-support extension.
 
 ## In Progress
 
-- Implementation of Hypatia LSP plugin
+- Implementation of the Hypatia Language Server client
   *(Ongoing since 2024.02.10)*.
 
 ## High Priority
