@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
 --                                                                            --
 -- Hypatia-VSCode - Hypatia Language Support for VSCode                       --
 --                                                                            --
@@ -7,18 +7,22 @@
 -- Copyright (C) 2025-2026, the Hypatia Development Team                      --
 -- All rights reserved                                                        --
 --                                                                            --
-------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 
 /* Begin of file style.js */
 
 import * as vscode from "vscode";
 import { readFile } from "node:fs/promises";
 
+/* -------------------------------------------------------------------------- */
+
 import utils from "./utils.js";
+
+/* -------------------------------------------------------------------------- */
 
 const { workspace, window } = vscode;
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 const CFG_ROOT = "hypatia.style";
 const STYLE_CHANNEL = "Hypatia Style";
@@ -101,7 +105,7 @@ const STATE = {
   }
 };
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Creates a tracer specifically configured for the style output channel and
@@ -114,7 +118,7 @@ function makeTracer(context) {
   return utils.makeConfigBasedTracer(context, CFG_ROOT, STYLE_CHANNEL, "trace");
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Gets the configuration for the hypatia.style section.
@@ -142,7 +146,7 @@ const gsGet = (ctx, k, d) => utils.gsGet(ctx, k, d);
  */
 const gsSet = (ctx, k, v) => utils.gsSet(ctx, k, v);
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Derives the configuration scope to use for a given editor.
@@ -163,7 +167,7 @@ function scopeFromKey(scopeKey) {
   try { return vscode.Uri.parse(String(scopeKey)); } catch { return undefined; }
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Checks if auto-theme application is enabled.
@@ -240,7 +244,7 @@ function getSemanticMode(scope) {
   return utils.normaliseEnum(String(raw ?? "inherit"), ["on", "off", "inherit"], "inherit");
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 const _themeTokenColorsCache = new Map();
 
@@ -299,7 +303,7 @@ const stripInjectedRules = (rules) =>
 const hasInjectedRules = (rules) =>
   utils.hasRulesWithNamePrefix(rules, INJECTED_RULE_PREFIX);
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Sets the main VSCode workbench theme.
@@ -444,7 +448,7 @@ async function restoreWholeTheme(context, switchingRef, trace, scope) {
 
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Applies the token color overlay if enabled.
@@ -552,7 +556,7 @@ async function restoreTokenOverlay(context, switchingRef, trace, scope) {
 
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Applies the override for semantic highlighting if enabled.
@@ -667,7 +671,7 @@ async function restoreSemanticOverride(context, switchingRef, trace, scope) {
 
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Ensures that style customizations (theme, tokens, semantic) applied in one
@@ -717,7 +721,7 @@ async function restoreAllApplied(context, switchingRef, trace) {
   await restoreWholeTheme(context, switchingRef, trace, themeScope);
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Main function that coordinates the application or restoration of styles.
@@ -788,7 +792,7 @@ async function reconcile(context, editor, switchingRef, lastWasHypatiaRef, reaso
 
 }
 
-/*----------------------------------------------------------------------------*/
+/* -------------------------------------------------------------------------- */
 
 /**
  * Activates the style management.

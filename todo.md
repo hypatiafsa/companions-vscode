@@ -5,7 +5,7 @@ List of tasks to be completed for the Hypatia-VSCode language-support extension.
 ## In Progress
 
 - Implementation of the Hypatia Language Server client
-  *(Ongoing since 2024.02.10)*.
+  *(Ongoing since 2026.02.10)*.
 
 ## High Priority
 

@@ -6,8 +6,7 @@ Hypatia Language Support for VSCode
 [![Tag]](https://github.com/hypatiafsa/companions-vscode/tags)
 [![License]](https://opensource.org/license/uoi-ncsa-php)
 
-[![MarketplaceV]](https://marketplace.visualstudio.com/items?itemName=hypatiafsa.hypatia)
-[![MarketplaceI]](https://marketplace.visualstudio.com/items?itemName=hypatiafsa.hypatia)
+[![Marketplace]](https://marketplace.visualstudio.com/items?itemName=hypatiafsa.hypatia)
 [![OpenVSXV]](https://open-vsx.org/extension/hypatiafsa/hypatia)
 [![OpenVSXD]](https://open-vsx.org/extension/hypatiafsa/hypatia)
 
@@ -18,19 +17,19 @@ Hypatia Language Support for VSCode
 [license]:
   https://img.shields.io/badge/License-Illinois-blue.svg
 
-[marketplacev]:
-  https://img.shields.io/visual-studio-marketplace/v/hypatiafsa.hypatia?label=MarketPlace
-[marketplacei]:
-  https://img.shields.io/visual-studio-marketplace/i/hypatiafsa.hypatia?label=MP+Installs
+[marketplace]:
+  https://img.shields.io/badge/VS%20Marketplace-Hypatia-blue
 [openvsxv]:
   https://img.shields.io/open-vsx/v/hypatiafsa/hypatia?label=Open+VSX
 [openvsxd]:
   https://img.shields.io/open-vsx/dt/hypatiafsa/hypatia?label=OVSX+Downloads
 
+[organisation-support]:
+  https://github.com/hypatiafsa/.github/blob/master/support.md
 [organisation-contributing]:
-  ../../../.github/blob/master/contributing.md
+  https://github.com/hypatiafsa/.github/blob/master/contributing.md
 [organisation-todo]:
-  ../../../.github/blob/master/todo.md
+  https://github.com/hypatiafsa/.github/blob/master/todo.md
 
 ---
 
@@ -140,7 +139,7 @@ The list of upcoming features and improvements is tracked in the
 ## Support
 
 For support with Hypatia-VSCode, please refer to the
-[Support Guidelines](../../../.github/blob/master/support.md).
+[Support Guidelines][organisation-support].
 
 For general discussions, check out GitHub Discussions on the
 [Hypatia Organisation page](https://github.com/hypatiafsa).

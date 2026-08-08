@@ -1,4 +1,4 @@
-/*------------------------------------------------------------------------------
+/* -----------------------------------------------------------------------------
 --                                                                            --
 -- Hypatia-VSCode - Hypatia Language Support for VSCode                       --
 --                                                                            --
@@ -7,7 +7,7 @@
 -- Copyright (C) 2025-2026, the Hypatia Development Team                      --
 -- All rights reserved                                                        --
 --                                                                            --
-------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------- */
 
 /**
  * Utility module for Hypatia VSCode extension.
@@ -30,9 +30,11 @@
 import * as vscode from "vscode";
 import { isDeepStrictEqual } from "node:util";
 
+/* -------------------------------------------------------------------------- */
+
 const { workspace, window, ColorThemeKind, ConfigurationTarget, Uri } = vscode;
 
-// Configuration helpers -------------------------------------------------------
+/* Configuration helpers ---------------------------------------------------- */
 
 /**
  * Retrieves the configuration object for a given section and optional scope.
@@ -171,7 +173,7 @@ async function updateSetting(section, key, value, { scope, target, switchingRef 
   }
 }
 
-// GlobalState helpers ---------------------------------------------------------
+/* GlobalState helpers ------------------------------------------------------ */
 
 /**
  * Gets a value from the extension's GlobalState.
@@ -195,7 +197,7 @@ function gsSet(ctx, k, v) {
   return ctx?.globalState?.update?.(k, v);
 }
 
-// Editor helpers --------------------------------------------------------------
+/* Editor helpers ----------------------------------------------------------- */
 
 /**
  * Checks if an editor is associated with a Hypatia document.
@@ -215,7 +217,7 @@ function isLightThemeKind(kind) {
   return kind === ColorThemeKind.Light || kind === ColorThemeKind.HighContrastLight;
 }
 
-// Output helpers --------------------------------------------------------------
+/* Output helpers ----------------------------------------------------------- */
 
 /**
  * Logs an error to the console.
@@ -280,7 +282,7 @@ function makeConfigBasedTracer(context, configRoot, channelName, traceFlagName =
   return createTracer(context, channelName, enabled, { prefix: defaultPrefix });
 }
 
-// General helpers -------------------------------------------------------------
+/* General helpers ---------------------------------------------------------- */
 
 /**
  * Normalises an enum value by checking it against a list of allowed values.
@@ -364,7 +366,7 @@ function createSerialQueue(onError = (e) => logError(e, "hypatia")) {
   };
 }
 
-// Export list -----------------------------------------------------------------
+/* Export list -------------------------------------------------------------- */
 
 export default {
 

@@ -18,6 +18,6 @@ cd "$(dirname "$0")"
 
 echo
 echo "# Building the extension..."
-npx @vscode/vsce pack
+npx @vscode/vsce package
 
 ## End of file build.sh ##
