@@ -1,27 +1,42 @@
-# Changelog
+# Hypatia-VSCode Change Log
 
 List of notable changes to the Hypatia-VSCode language-support extension.
 
-## [Unreleased] [*2026.02.10*]
+## [Unreleased] [*2026.02.11*]
 
-[unreleased]: https://github.com/hypatiafsa/vscode/tree/dev
+[unreleased]:
+  https://github.com/hypatiafsa/companions-vscode/compare/master...dev
 
 Development version, not yet released to the public.
 
+## [0.0.3] [*2026.08.08*]
+
+[0.0.3]: <https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.3>
+
+4th public release
+
 ### Added
 
-- Initial implementation of the Hypatia Language Server client.
+- Added an initial stub of the Hypatia Language Server client.
+
+### Changed
+
+- Small improvements across many files.
+- Change of the repository name from vscode to companions-vscode.
 
 ## [0.0.2] [*2026.02.10*]
 
-[0.0.2]: https://github.com/hypatiafsa/vscode/releases/tag/v0.0.2
+[0.0.2]: https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.2
 
 3rd public release
+
+### Added
+
+- Added code documentation for improved readability and maintainability.
 
 ### Changed
 
 - Refactored codebase in preparation for Hypatia Language Server integration.
-- Added code documentation for improved readability and maintainability.
 
 ### Fixed
 
@@ -29,7 +44,7 @@ Development version, not yet released to the public.
 
 ## [0.0.1] [*2026.02.07*]
 
-[0.0.1]: https://github.com/hypatiafsa/vscode/releases/tag/v0.0.1
+[0.0.1]: https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.1
 
 2nd public release
 
@@ -44,6 +59,6 @@ Development version, not yet released to the public.
 
 ## [0.0.0] [*2026.01.29*]
 
-[0.0.0]: https://github.com/hypatiafsa/vscode/releases/tag/v0.0.0
+[0.0.0]: https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.0
 
 1st public release

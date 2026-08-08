@@ -153,48 +153,48 @@
     },
     {
       "scope": "lingua.hypatia",
-      "settings": { "foreground": "#DCDCA0" }
+      "settings": { "foreground": "#00CACA" }
     },
     {
       "scope": "alphabetum.hypatia",
-      "settings": { "foreground": "#55FF00" }
+      "settings": { "foreground": "#DDDDDD" }
     },
     {
       "scope": "intervalla.hypatia",
-      "settings": { "foreground": "#FF5500" }
+      "settings": { "foreground": "#CCCCCC" }
     },
     {
       "scope": "inclusores.hypatia",
-      "settings": { "foreground": "#00FFAA" }
+      "settings": { "foreground": "#BBBBBB" }
     },
     {
       "scope": "lexicon.hypatia",
-      "settings": { "foreground": "#55AF55" }
+      "settings": { "foreground": "#05A555" }
     },
     {
       "scope": "mutabilia.hypatia",
-      "settings": { "foreground": "#AF55AF" }
+      "settings": { "foreground": "#D5D555" }
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#0FF0A0" }
+      "settings": { "foreground": "#00CACA" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#0FF0A0" }
+      "settings": { "foreground": "#00CACA" }
     },
     {
-      "scope": "statement.hypatia",
-      "settings": { "foreground": "#A0F0A0" }
+      "scope": "phrase.hypatia",
+      "settings": { "foreground": "#05A555" }
     },
 
     {
       "scope": "keyword.hypatia",
-      "settings": { "foreground": "#55ACD5", "fontStyle": "bold" }
+      "settings": { "foreground": "#559AD5", "fontStyle": "bold" }
     },
     {
       "scope": "string.hypatia",
-      "settings": { "foreground": "#AAAA00", "fontStyle": "italic" }
+      "settings": { "foreground": "#DADADA", "fontStyle": "italic" }
     },
     {
       "scope": "comment.hypatia",

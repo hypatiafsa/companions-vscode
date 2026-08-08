@@ -5,14 +5,14 @@
   "description": "Hypatia language support for VSCode",
   "author": "hypatiadevteam",
   "publisher": "hypatiafsa",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://hypatiafsa.github.io/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hypatiafsa/vscode"
+    "url": "https://github.com/hypatiafsa/companions-vscode"
   },
   "bugs": {
-    "url": "https://github.com/hypatiafsa/vscode/issues"
+    "url": "https://github.com/hypatiafsa/companions-vscode/issues"
   },
   "license": "NCSA",
   "icon": "images/hypatia.png",
@@ -66,6 +66,50 @@
         "editor.tabSize": 2
       }
     },
+    "commands": [
+      {
+        "command": "hypatia.hls.server",
+        "title": "Toggle HLS",
+        "category": "Hypatia"
+      },
+      {
+        "command": "hypatia.hls.restart",
+        "title": "Restart HLS",
+        "category": "Hypatia"
+      },
+      {
+        "command": "hypatia.hls.validate",
+        "title": "Validate Current Editor",
+        "category": "Hypatia"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "hypatia.hls.server"
+        },
+        {
+          "command": "hypatia.hls.restart",
+          "when": "editorLangId == hypatia"
+        },
+        {
+          "command": "hypatia.hls.validate",
+          "when": "editorLangId == hypatia"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "hypatia.hls.restart",
+        "key": "ctrl+k ctrl+enter",
+        "when": "editorTextFocus && editorLangId == hypatia"
+      },
+      {
+        "command": "hypatia.hls.validate",
+        "key": "ctrl+k ctrl+v",
+        "when": "editorTextFocus && editorLangId == hypatia"
+      }
+    ],
     "configuration": {
       "title": "Hypatia",
       "properties": {

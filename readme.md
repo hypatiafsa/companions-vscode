@@ -2,6 +2,35 @@
 
 Hypatia Language Support for VSCode
 
+[![Release]](https://github.com/hypatiafsa/companions-vscode/releases)
+[![Tag]](https://github.com/hypatiafsa/companions-vscode/tags)
+[![License]](https://opensource.org/license/uoi-ncsa-php)
+
+[![Marketplace]](https://marketplace.visualstudio.com/items?itemName=hypatiafsa.hypatia)
+[![OpenVSXV]](https://open-vsx.org/extension/hypatiafsa/hypatia)
+[![OpenVSXD]](https://open-vsx.org/extension/hypatiafsa/hypatia)
+
+[release]:
+  https://img.shields.io/github/v/release/hypatiafsa/companions-vscode?label=Release
+[tag]:
+  https://img.shields.io/github/v/tag/hypatiafsa/companions-vscode?label=Tag
+[license]:
+  https://img.shields.io/badge/License-Illinois-blue.svg
+
+[marketplace]:
+  https://img.shields.io/badge/VS%20Marketplace-Hypatia-blue
+[openvsxv]:
+  https://img.shields.io/open-vsx/v/hypatiafsa/hypatia?label=Open+VSX
+[openvsxd]:
+  https://img.shields.io/open-vsx/dt/hypatiafsa/hypatia?label=OVSX+Downloads
+
+[organisation-support]:
+  https://github.com/hypatiafsa/.github/blob/master/support.md
+[organisation-contributing]:
+  https://github.com/hypatiafsa/.github/blob/master/contributing.md
+[organisation-todo]:
+  https://github.com/hypatiafsa/.github/blob/master/todo.md
+
 ---
 
 ### Table of Contents
@@ -110,10 +139,10 @@ The list of upcoming features and improvements is tracked in the
 ## Support
 
 For support with Hypatia-VSCode, please refer to the
-[Support Guidelines](../../../.github/blob/master/support.md).
+[Support Guidelines][organisation-support].
 
 For general discussions, check out GitHub Discussions on the
-[Hypatia Organisation webpage](https://github.com/hypatiafsa).
+[Hypatia Organisation page](https://github.com/hypatiafsa).
 
 ---
 
@@ -122,10 +151,8 @@ For general discussions, check out GitHub Discussions on the
 We welcome contributions of all kinds, from bug reports and feature requests to
 documentation improvements and code enhancements.
 If you would like to contribute, please read the
-[Contributing Guidelines](../../../.github/blob/master/contributing.md) and
-check both the [repository](./todo.md) and
-[organisation](../../../.github/blob/master/todo.md) to do files for planned
-tasks.
+[Contributing Guidelines][organisation-contributing] and consult the
+[repository To Do](./todo.md) and [organisation To Do][organisation-todo] files.
 
 ---
 

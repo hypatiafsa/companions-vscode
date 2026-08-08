@@ -234,11 +234,11 @@
       ]
     },
 
-    "statement": {
+    "phrase": {
       "patterns": [
-        { "name": "statement.hypatia", "match": "[^$\\r\\n]+" },
-        { "name": "statement.hypatia", "match": "[\\r\\n]+" },
-        { "name": "statement.hypatia", "match": "\\$(?!(?:ex|per|pr|cum|cm|\\-|\\{|\\}|\\.))" }
+        { "name": "phrase.hypatia", "match": "[^$\\r\\n]+" },
+        { "name": "phrase.hypatia", "match": "[\\r\\n]+" },
+        { "name": "phrase.hypatia", "match": "\\$(?!(?:ex|per|pr|cum|cm|\\-|\\{|\\}|\\.))" }
       ]
     },
 
@@ -267,7 +267,7 @@
             }
           ]
         },
-        { "include": "#statement" }
+        { "include": "#phrase" }
       ]
     },
 
@@ -333,7 +333,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=\\$\\.)",
               "patterns": [
-                { "include": "#statement" }
+                { "include": "#phrase" }
               ]
             }
           ]
@@ -367,7 +367,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=\\$(?:ex))",
               "patterns": [
-                { "include": "#statement" }
+                { "include": "#phrase" }
               ]
             },
             {

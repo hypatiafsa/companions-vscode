@@ -1,1 +1,17 @@
-*.vscode
+# Editors
+.vscode/
+
+# Logs/Temporary
+*.log
+*.tmp
+*.temp
+
+# Archives
+*.7z
+*.bz2
+*.gz
+*.rar
+*.tar
+*.tgz
+*.xz
+*.zip
