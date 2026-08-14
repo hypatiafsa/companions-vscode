@@ -2,12 +2,23 @@
 
 List of notable changes to the Hypatia-VSCode language-support extension.
 
-## [Unreleased] [*2026.02.11*]
+## [Unreleased] [*2026.08.14*]
 
 [unreleased]:
   https://github.com/hypatiafsa/companions-vscode/compare/master...dev
 
 Development version, not yet released to the public.
+
+## [0.0.4] [*2026.08.14*]
+
+[0.0.4]: <https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.4>
+
+5th public release
+
+### Changed
+
+- Update of the syntax highlighting to reflect the new canonical forms `$Ab`,
+  `$Ot`, and `$at`.
 
 ## [0.0.3] [*2026.08.08*]
 
