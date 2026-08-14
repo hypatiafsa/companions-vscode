@@ -113,38 +113,6 @@
     "configuration": {
       "title": "Hypatia",
       "properties": {
-        "hypatia.hls.enabled": {
-          "type": "boolean",
-          "scope": "window",
-          "default": true,
-          "description": "HLS: Enable Hypatia Language Server."
-        },
-        "hypatia.hls.path": {
-          "type": "string",
-          "scope": "window",
-          "default": "",
-          "description": "HLS: Path to the HLS executable."
-        },
-        "hypatia.hls.args": {
-          "type": "array",
-          "items": { "type": "string" },
-          "scope": "window",
-          "default": [],
-          "description": "HLS: Arguments passed to the HLS executable."
-        },
-        "hypatia.hls.trace": {
-          "type": "string",
-          "scope": "window",
-          "default": "off",
-          "enum": ["off", "messages", "verbose"],
-          "description": "HLS: Trace LSP client/server messages to the HLS output channel."
-        },
-        "hypatia.hls.shutdowndelay": {
-          "type": "number",
-          "scope": "window",
-          "default": 5000,
-          "description": "HLS: How long (ms) to keep the HLS running after the last Hypatia editor is closed."
-        },
         "hypatia.style.autotheme": {
           "type": "boolean",
           "scope": "window",

@@ -107,7 +107,7 @@
     "alphabetum": {
       "patterns": [
         {
-          "begin": "(\\$(?:Alphabetum|Al))",
+          "begin": "(\\$(?:Alphabetum|Ab))",
           "beginCaptures": { "1": { "name": "keyword.hypatia" } },
           "end": "(\\$\\.)",
           "endCaptures": { "1": { "name": "keyword.hypatia" } },
@@ -161,25 +161,25 @@
             {
               "begin": "(\\$(?:Lexicon|Lx))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:post|ps|ante|an|\\.))",
+              "end": "(?=\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
-                { "name": "lexicon.hypatia", "match": "\\$(?!post|ps|ante|an|\\.)" }
+                { "name": "lexicon.hypatia", "match": "\\$(?!post|ps|ante|at|\\.)" }
               ]
             },
             {
               "begin": "(\\$(?:post|ps))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:ante|an|\\.))",
+              "end": "(?=\\$(?:ante|at|\\.))",
               "patterns": [
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
-                { "name": "lexicon.hypatia", "match": "\\$(?!ante|an|\\.)" }
+                { "name": "lexicon.hypatia", "match": "\\$(?!ante|at|\\.)" }
               ]
             },
             {
-              "begin": "(\\$(?:ante|an))",
+              "begin": "(\\$(?:ante|at))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=\\$\\.)",
               "patterns": [
@@ -202,25 +202,25 @@
             {
               "begin": "(\\$(?:Mutabilia|Mt))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:post|ps|ante|an|\\.))",
+              "end": "(?=\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
-                { "name": "mutabilia.hypatia", "match": "\\$(?!post|ps|ante|an|\\.)" }
+                { "name": "mutabilia.hypatia", "match": "\\$(?!post|ps|ante|at|\\.)" }
               ]
             },
             {
               "begin": "(\\$(?:post|ps))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:ante|an|\\.))",
+              "end": "(?=\\$(?:ante|at|\\.))",
               "patterns": [
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
-                { "name": "mutabilia.hypatia", "match": "\\$(?!ante|an|\\.)" }
+                { "name": "mutabilia.hypatia", "match": "\\$(?!ante|at|\\.)" }
               ]
             },
             {
-              "begin": "(\\$(?:ante|an))",
+              "begin": "(\\$(?:ante|at))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=\\$\\.)",
               "patterns": [
@@ -606,16 +606,16 @@
     "obtineo": {
       "patterns": [
         {
-          "begin": "(?=\\$(?:Obtineo|Ob))",
+          "begin": "(?=\\$(?:Obtineo|Ot))",
           "end": "(\\$\\.)",
           "endCaptures": { "1": { "name": "keyword.hypatia" } },
           "patterns": [
             {
-              "begin": "(?=\\$(?:Obtineo|Ob))",
+              "begin": "(?=\\$(?:Obtineo|Ot))",
               "end": "(?=\\$(?:cum|cm))",
               "patterns": [
                 {
-                  "begin": "(\\$(?:Obtineo|Ob))",
+                  "begin": "(\\$(?:Obtineo|Ot))",
                   "beginCaptures": { "1": { "name": "keyword.hypatia" } },
                   "end": "(?=\\$(?:cum|cm|\\-))",
                   "patterns" : [
