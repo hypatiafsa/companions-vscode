@@ -171,21 +171,21 @@
             {
               "begin": "(\\$(?:post|ps))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:ante|at|\\.))",
+              "end": "(?=\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
-                { "name": "lexicon.hypatia", "match": "\\$(?!ante|at|\\.)" }
+                { "name": "lexicon.hypatia", "match": "\\$(?!post|ps|ante|at|\\.)" }
               ]
             },
             {
               "begin": "(\\$(?:ante|at))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$\\.)",
+              "end": "(?=\\$(?:ante|at|\\.))",
               "patterns": [
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
-                { "name": "lexicon.hypatia", "match": "\\$(?!\\.)" }
+                { "name": "lexicon.hypatia", "match": "\\$(?!ante|at|\\.)" }
               ]
             }
           ]
@@ -212,21 +212,21 @@
             {
               "begin": "(\\$(?:post|ps))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$(?:ante|at|\\.))",
+              "end": "(?=\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
-                { "name": "mutabilia.hypatia", "match": "\\$(?!ante|at|\\.)" }
+                { "name": "mutabilia.hypatia", "match": "\\$(?!post|ps|ante|at|\\.)" }
               ]
             },
             {
               "begin": "(\\$(?:ante|at))",
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
-              "end": "(?=\\$\\.)",
+              "end": "(?=\\$(?:ante|at|\\.))",
               "patterns": [
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
-                { "name": "mutabilia.hypatia", "match": "\\$(?!\\.)" }
+                { "name": "mutabilia.hypatia", "match": "\\$(?!ante|at|\\.)" }
               ]
             }
           ]
