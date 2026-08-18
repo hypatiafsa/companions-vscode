@@ -22,6 +22,7 @@
         { "include": "#lexicon"    },
         { "include": "#mutabilia"  },
         { "include": "#sit"        },
+        { "include": "#definitio"  },
         { "include": "#principium" },
         { "include": "#productum"  },
         { "include": "#regula"     },
@@ -301,6 +302,87 @@
           "patterns": [
             { "name": "keyword.hypatia", "match": "(\\$(?:Sit|St))\\s*(?=\\$\\.)" },
             { "include": "#assignments" }
+          ]
+        }
+      ]
+    },
+
+    "definitio-element": {
+      "patterns": [
+        {
+          "begin": "(\\$\\-)",
+          "beginCaptures": { "1": { "name": "keyword.hypatia" } },
+          "end": "(?=\\$(?:sic|sc|;|\\.))",
+          "patterns": [
+            { "include": "#assertion" }
+          ]
+        },
+        { "include": "#assertion" }
+      ]
+    },
+    "definitio": {
+      "patterns": [
+        {
+          "begin": "(?=\\$(?:Definitio|Df))",
+          "end": "(\\$\\.)",
+          "endCaptures": { "1": { "name": "keyword.hypatia" } },
+          "patterns": [
+            {
+              "begin": "(\\$(?:Definitio|Df))",
+              "beginCaptures": { "1": { "name": "keyword.hypatia" } },
+              "end": "(?=\\$\\:)",
+              "patterns": [
+                {
+                  "name": "sententia.hypatia",
+                  "begin": "\\s*([^\\s$]+)",
+                  "end": "(?=\\$\\:)",
+                  "patterns": [
+                    { "include": "#blob" }
+                  ]
+                }
+              ]
+            },
+            {
+              "begin": "(\\$\\:)",
+              "beginCaptures": { "1": { "name": "keyword.hypatia" } },
+              "end": "(?=\\$(?:sic|sc))",
+              "patterns": [
+                { "include": "#definitio-element" }
+              ]
+            },
+            {
+              "begin": "(\\$(?:sic|sc))",
+              "beginCaptures": { "1": { "name": "keyword.hypatia" } },
+              "end": "(?=\\$\\.)",
+              "patterns": [
+                {
+                  "begin": "(?=\\s*[^\\s$]+\\s*\\$\\:)",
+                  "end": "(?=\\$(?:;|\\.))",
+                  "patterns": [
+                    {
+                      "name": "sententia.hypatia",
+                      "begin": "\\s*([^\\s$]+)",
+                      "end": "(?=\\$\\:)",
+                      "patterns": [
+                        { "include": "#blob" }
+                      ]
+                    },
+                    {
+                      "begin": "(\\$\\:)",
+                      "beginCaptures": {
+                        "1": { "name": "keyword.hypatia" }
+                      },
+                      "end": "(?=\\$(?:;|\\.))",
+                      "patterns": [
+                        { "include": "#definitio-element" }
+                      ]
+                    }
+                  ]
+                },
+                { "name": "keyword.hypatia", "match": "\\$;" },
+                { "include": "#definitio-element" }
+              ]
+            }
           ]
         }
       ]
