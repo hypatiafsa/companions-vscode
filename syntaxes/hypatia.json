@@ -46,9 +46,31 @@
                 {
                   "name": "dialect.hypatia",
                   "begin": "Sunya|Sifr|Zero",
-                  "end": "(?=\\$\\:)",
+                  "end": "(?=\\$(?:modo|md)|\\$\\:)",
                   "patterns": [
                     { "include": "#blob" }
+                  ]
+                },
+                {
+                  "begin": "(\\$(?:modo|md))",
+                  "beginCaptures": {
+                    "1": { "name": "keyword.hypatia" }
+                  },
+                  "end": "(?=\\$\\:)",
+                  "patterns": [
+                    {
+                      "name": "mode.hypatia",
+                      "begin": "Unica|Omnes|Aliqua",
+                      "end": "(?=\\$\\:)",
+                      "patterns": [
+                        { "include": "#blob" }
+                      ]
+                    },
+                    {
+                      "name": "error.hypatia",
+                      "begin": "(?=\\S)(?!(?:Unica|Omnes|Aliqua))",
+                      "end": "(?=\\$\\:)"
+                    }
                   ]
                 },
                 {
@@ -920,9 +942,8 @@
 
     "blob": {
       "patterns": [
-        { "name": "blob.hypatia",    "match": "\\\\(?:--|/-)" },
-        { "name": "comment.hypatia", "match": "(?<!\\\\)--.*$" },
-        { "include": "#multicomment" },
+        { "name": "comment.hypatia", "match": "--.*$" },
+        { "name": "comment.hypatia", "begin": "/-", "end": "-/" },
         { "name": "blob.hypatia",    "match": "[^$\\r\\n\\-/]+" },
         { "name": "blob.hypatia",    "match": "/(?!-)" },
         { "name": "blob.hypatia",    "match": "-(?!-|/)" },
@@ -930,15 +951,6 @@
         { "name": "blob.hypatia",    "match": "\\$(?![A-Za-z\\{\\}:\\.,=\\-])" }
       ]
     },
-    "multicomment": {
-      "name": "comment.hypatia",
-      "begin": "(?<!\\\\)/-",
-      "end": "(?<!\\\\)-/",
-      "patterns": [
-        { "include": "#multicomment" }
-      ]
-    },
-
     "error": {
       "patterns": [
         { "name": "error.hypatia", "match": "[^$\\r\\n]+" },

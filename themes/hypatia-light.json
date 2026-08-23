@@ -161,6 +161,10 @@
       "settings": { "foreground": "#7A0FA0" }
     },
     {
+      "scope": "mode.hypatia",
+      "settings": { "foreground": "#5A3AA5" }
+    },
+    {
       "scope": "lingua.hypatia",
       "settings": { "foreground": "#7A5C00" }
     },
