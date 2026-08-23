@@ -942,8 +942,9 @@
 
     "blob": {
       "patterns": [
-        { "name": "comment.hypatia", "match": "--.*$" },
-        { "name": "comment.hypatia", "begin": "/-", "end": "-/" },
+        { "name": "blob.hypatia",    "match": "\\\\(?:--|/-)" },
+        { "name": "comment.hypatia", "match": "(?<!\\\\)--.*$" },
+        { "include": "#multicomment" },
         { "name": "blob.hypatia",    "match": "[^$\\r\\n\\-/]+" },
         { "name": "blob.hypatia",    "match": "/(?!-)" },
         { "name": "blob.hypatia",    "match": "-(?!-|/)" },
@@ -951,6 +952,15 @@
         { "name": "blob.hypatia",    "match": "\\$(?![A-Za-z\\{\\}:\\.,=\\-])" }
       ]
     },
+    "multicomment": {
+      "name": "comment.hypatia",
+      "begin": "(?<!\\\\)/-",
+      "end": "(?<!\\\\)-/",
+      "patterns": [
+        { "include": "#multicomment" }
+      ]
+    },
+
     "error": {
       "patterns": [
         { "name": "error.hypatia", "match": "[^$\\r\\n]+" },
