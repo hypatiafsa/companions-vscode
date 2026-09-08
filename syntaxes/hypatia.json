@@ -197,6 +197,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=(?<!\\$)\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
+                { "include": "#vacuum" },
                 { "name": "lexicon.hypatia", "match": "\\$\\$" },
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
@@ -208,6 +209,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=(?<!\\$)\\$(?:ante|at|\\.))",
               "patterns": [
+                { "include": "#vacuum" },
                 { "name": "lexicon.hypatia", "match": "\\$\\$" },
                 { "name": "lexicon.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "lexicon.hypatia", "match": "[\\r\\n]+" },
@@ -241,6 +243,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=(?<!\\$)\\$(?:post|ps|ante|at|\\.))",
               "patterns": [
+                { "include": "#vacuum" },
                 { "name": "mutabilia.hypatia", "match": "\\$\\$" },
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
@@ -252,6 +255,7 @@
               "beginCaptures": { "1": { "name": "keyword.hypatia" } },
               "end": "(?=(?<!\\$)\\$(?:ante|at|\\.))",
               "patterns": [
+                { "include": "#vacuum" },
                 { "name": "mutabilia.hypatia", "match": "\\$\\$" },
                 { "name": "mutabilia.hypatia", "match": "[^$\\r\\n]+" },
                 { "name": "mutabilia.hypatia", "match": "[\\r\\n]+" },
@@ -263,8 +267,19 @@
       ]
     },
 
+    "vacuum": {
+      "name": "keyword.hypatia",
+      "match": "(?<!\\$)\\$(?:Vacuum|Vc)"
+    },
+
+    "qualification": {
+      "name": "keyword.hypatia",
+      "match": "(?<!\\$)\\$@"
+    },
+
     "phrase": {
       "patterns": [
+        { "include": "#vacuum" },
         { "name": "phrase.hypatia", "match": "\\$\\$" },
         { "name": "phrase.hypatia", "match": "[^$\\r\\n]+" },
         { "name": "phrase.hypatia", "match": "[\\r\\n]+" },
@@ -316,7 +331,11 @@
           "beginCaptures": { "1": { "name": "keyword.hypatia" } },
           "end": "(?=(?<!\\$)\\$(?:\\,|\\.))",
           "patterns": [
-            { "name": "string.hypatia", "match": "(?!(?<!\\$)\\$)[^\\s\\t$]+" }
+            { "include": "#vacuum" },
+            { "name": "string.hypatia", "match": "\\$\\$" },
+            { "name": "string.hypatia", "match": "[^$\\r\\n]+" },
+            { "name": "string.hypatia", "match": "[\\r\\n]+" },
+            { "name": "string.hypatia", "match": "\\$(?!(?:\\,|\\.))" }
           ]
         }
       ]
@@ -682,6 +701,7 @@
                   "begin": "\\s*([^\\s$]+)",
                   "end": "(?=(?<!\\$)\\$\\.)",
                   "patterns": [
+                    { "include": "#qualification" },
                     { "include": "#blob" }
                   ]
                 }
@@ -697,6 +717,7 @@
                   "begin": "\\s*([^\\s$]+)",
                   "end": "(?=(?<!\\$)\\$(?:cum|cm|\\.))",
                   "patterns": [
+                    { "include": "#qualification" },
                     { "include": "#blob" }
                   ]
                 }
@@ -794,6 +815,7 @@
                   "begin": "\\s*([^\\s$]+)",
                   "end": "(?=(?<!\\$)\\$(?:cum|cm|\\.))",
                   "patterns": [
+                    { "include": "#qualification" },
                     { "include": "#blob" }
                   ]
                 }
