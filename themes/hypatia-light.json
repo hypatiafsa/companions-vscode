@@ -200,6 +200,10 @@
       "scope": "phrase.hypatia",
       "settings": { "foreground": "#5A5A5A" }
     },
+    {
+      "scope": "object.hypatia",
+      "settings": { "foreground": "#8A4510" }
+    },
 
     {
       "scope": "keyword.hypatia",
