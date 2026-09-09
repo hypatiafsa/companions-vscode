@@ -330,18 +330,29 @@ function stripRulesWithNamePrefix(rules, namePrefix) {
 }
 
 /**
- * Clones an array of TextMate rules and assigns them new names with a unique
- * prefix.
+ * Clones an array of TextMate rules, assigns them new names with a unique
+ * prefix, and optionally restricts their scopes with a common selector.
  * @param {Array<any> | undefined} rules - Original array of rules.
  * @param {string} namePrefix - Prefix to use for the new names.
- * @returns {Array<any>} New array of cloned rules with new names.
+ * @param {string} [scopePrefix] - Optional TextMate selector to prepend to
+ * every string scope in each cloned rule.
+ * @returns {Array<any>} New array of cloned rules with new names and, when
+ * requested, prefixed scopes.
  */
-function cloneTextMateRulesWithInjectedNames(rules, namePrefix) {
+function cloneTextMateRulesWithInjectedNames(rules, namePrefix, scopePrefix) {
   if (!Array.isArray(rules)) return [];
+  const prefixScope = (scope) =>
+    typeof scopePrefix === "string" && scopePrefix.length > 0
+      ? `${ scopePrefix } ${ scope }`
+      : scope;
   return rules.map((r, i) => {
     const clone = Object.assign({}, r);
     clone.name = `${ namePrefix }:${ i }`;
-    if (Array.isArray(clone.scope)) clone.scope = clone.scope.slice();
+    if (typeof clone.scope === "string") {
+      clone.scope = prefixScope(clone.scope);
+    } else if (Array.isArray(clone.scope)) {
+      clone.scope = clone.scope.map(prefixScope);
+    }
     if (clone.settings && typeof clone.settings === "object") {
       clone.settings = Object.assign({}, clone.settings);
     }
