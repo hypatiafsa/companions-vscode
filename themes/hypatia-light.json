@@ -190,11 +190,11 @@
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#005A5A" }
+      "settings": { "foreground": "#101010" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#005A5A" }
+      "settings": { "foreground": "#101010" }
     },
     {
       "scope": "phrase.hypatia",

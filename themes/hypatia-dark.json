@@ -181,11 +181,11 @@
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#F0F0F0" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#F0F0F0" }
     },
     {
       "scope": "phrase.hypatia",

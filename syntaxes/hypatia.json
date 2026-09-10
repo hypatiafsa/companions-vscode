@@ -288,8 +288,11 @@
     },
 
     "qualification": {
-      "name": "keyword.hypatia",
-      "match": "(?<!\\$)\\$@"
+      "match": "((?<!\\$)\\$@)\\s*([^\\s$]+)",
+      "captures": {
+        "1": { "name": "keyword.hypatia" },
+        "2": { "name": "lingua.hypatia" }
+      }
     },
 
     "phrase": {
