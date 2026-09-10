@@ -173,11 +173,11 @@
     },
     {
       "scope": "lexicon.hypatia",
-      "settings": { "foreground": "#05A555" }
+      "settings": { "foreground": "#05A5A5" }
     },
     {
       "scope": "mutabilia.hypatia",
-      "settings": { "foreground": "#D5D555" }
+      "settings": { "foreground": "#E5D56F" }
     },
     {
       "scope": "sententia.hypatia",
@@ -189,7 +189,7 @@
     },
     {
       "scope": "phrase.hypatia",
-      "settings": { "foreground": "#05A555" }
+      "settings": { "foreground": "#05A5A5" }
     },
     {
       "scope": "object.hypatia",

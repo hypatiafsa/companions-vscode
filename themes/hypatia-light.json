@@ -182,7 +182,7 @@
     },
     {
       "scope": "lexicon.hypatia",
-      "settings": { "foreground": "#0F5F5F" }
+      "settings": { "foreground": "#00607A" }
     },
     {
       "scope": "mutabilia.hypatia",
@@ -198,7 +198,7 @@
     },
     {
       "scope": "phrase.hypatia",
-      "settings": { "foreground": "#5A5A5A" }
+      "settings": { "foreground": "#00607A" }
     },
     {
       "scope": "object.hypatia",
