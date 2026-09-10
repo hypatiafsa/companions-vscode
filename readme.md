@@ -36,56 +36,79 @@ Hypatia Language Support for VSCode
 ### Table of Contents
 
 1. [**The Extension**](#the-extension)
-2. [**Versioning**](#versioning)
-3. [**Installation**](#installation)
-4. [**Change Log**](#change-log)
-5. [**To Do**](#to-do)
-6. [**Support**](#support)
-7. [**Contributing**](#contributing)
-8. [**Contributors**](#contributors)
+2. [**Language Styling**](#language-styling)
+3. [**HLS Commands**](#hls-commands)
+4. [**Configuration**](#configuration)
+5. [**Versioning**](#versioning)
+6. [**Installation**](#installation)
+7. [**Change Log**](#change-log)
+8. [**To Do**](#to-do)
+9. [**Support**](#support)
+10. [**Contributing**](#contributing)
+11. [**Contributors**](#contributors)
 
 ---
 
 ## The Extension
 
-**Hypatia-VSCode** provides editor support for the Hypatia language in VSCode.
-Its goal is to make Hypatia documents pleasant to read and write by offering
-sensible defaults and language-aware editor behaviour.
+**Hypatia-VSCode** provides language and editor support for Hypatia documents in
+VSCode.
+Files with the `.hyp` and `.hypatia` extensions are recognised as Hypatia
+documents and receive Hypatia-specific syntax highlighting, styling, editor
+configuration, and command support.
 
-This extension provides syntax highlighting for Hypatia files (`*.hyp` and
-`*.hypatia`) and includes bundled light and dark colour themes.
-It can also apply Hypatia-specific token colours without changing the user's
-global VSCode theme.
-Specifically, while a Hypatia editor is active, the extension can optionally
-automate style choices: it can enable a token-colour overlay that leaves the
-current theme untouched or switch the whole theme between its bundled light/dark
-variants.
+The extension also bundles the **Hypatia Light** and **Hypatia Dark** themes.
+They can be selected as ordinary VSCode colour themes, while their token
+palettes are used to style Hypatia syntax under arbitrary VSCode themes.
 
-By default, the extension automatically applies Hypatia token colours while a
-Hypatia file is active and restores the previous settings when switching to a
-different file type.
-This behaviour is controlled by the `hypatia.style.autotokens` setting (default:
-`true`).
+---
 
-Automatic switching of the whole VSCode colour theme can be enabled while a
-Hypatia file is active.
-This behaviour is controlled by the `hypatia.style.autotheme` setting (default:
-`false`).
+## Language Styling
 
-The theme variant used by Hypatia's style automation can be selected explicitly,
-or left to follow the current VSCode theme kind.
-This behaviour is controlled by the `hypatia.style.variant` setting, which
-accepts `light`, `dark`, or `auto` (default: `auto`).
+The extension provides TextMate syntax highlighting for Hypatia files and
+dedicated light and dark token palettes.
 
-Semantic highlighting can be forced on or off while a Hypatia file is active, or
-left unchanged to inherit the current VSCode configuration.
-This behaviour is controlled by the `hypatia.style.semantichighlighting`
-setting, which accepts `on`, `off`, or `inherit` (default: `inherit`).
+The grammar follows the current Hypatia syntax as closely as possible within the
+limitations of TextMate, including escaped syntax, comments, qualified
+references, Sifr constructs, and best-effort object-language highlighting.
+Object-language highlighting currently recognises the inclusor pair `“ ... ”`.
 
-For troubleshooting, the extension can emit detailed logs about style automation
-to the *Hypatia Style* output channel.
-This behaviour is controlled by the `hypatia.style.trace` setting (default:
-`false`).
+Hypatia token colours are scoped to Hypatia documents, so they can coexist with
+other languages and editor groups. The `hypatia.style.variant` setting selects
+the light or dark palette, or follows the active VSCode theme when set to
+`auto`.
+
+The extension also provides Hypatia-specific editor support for comments,
+surrounding pairs, auto-closing pairs, brackets, and folding.
+
+---
+
+## HLS Commands
+
+The extension reserves the following commands for Hypatia Language Server
+integration:
+
+- **Hypatia: Toggle HLS**;
+- **Hypatia: Restart HLS** (`Ctrl+K Ctrl+Enter` in a Hypatia editor);
+- **Hypatia: Validate Current Editor** (`Ctrl+K Ctrl+V` in a Hypatia editor).
+
+The current HLS integration is an initial stub: invoking these commands records
+the invocation in the *Hypatia HLS* output channel.
+The command identifiers and keybindings provide the interface for the future
+Pythia language-server client.
+
+---
+
+## Configuration
+
+The extension currently exposes the following style settings:
+
+- `hypatia.style.variant`: selects `light`, `dark`, or `auto` for Hypatia token
+  colours;
+- `hypatia.style.trace`: enables diagnostic logging for Hypatia styling.
+
+HLS configuration options are available under `hypatia.hls.*` in the VSCode
+settings interface, in preparation for the language-server integration.
 
 ---
 
@@ -112,7 +135,11 @@ If you have a `.vsix` release file (for example from the GitHub Releases page):
 
 - In VSCode:
 
-  open the **Extensions** view → click the `...` menu → **Install from VSIX…**
+  open the **Extensions** view
+  →
+  click the `...` menu
+  →
+  **Install from VSIX…**
 
 - From the terminal:
 

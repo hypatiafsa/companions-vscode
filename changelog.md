@@ -2,12 +2,30 @@
 
 List of notable changes to the Hypatia-VSCode language-support extension.
 
-## [Unreleased] [*2026.08.14*]
+## [Unreleased] [*2026.09.10*]
 
 [unreleased]:
   https://github.com/hypatiafsa/companions-vscode/compare/master...dev
 
 Development version, not yet released to the public.
+
+## [0.0.5] [*2026.09.10*]
+
+[0.0.5]: <https://github.com/hypatiafsa/companions-vscode/releases/tag/v0.0.5>
+
+6th public release
+
+### Changed
+
+- Improved the Hypatia TextMate grammar to better match the current language
+  specification, including escaped syntax, comments, qualified references,
+  best-effort object-language highlighting, and Sifr constructs.
+- Simplified the style configuration and updated the related documentation.
+
+### Fixed
+
+- Prevented Hypatia styling from interfering with other languages, editor
+  groups, terminal focus, or the selected VS Code theme.
 
 ## [0.0.4] [*2026.08.14*]
 

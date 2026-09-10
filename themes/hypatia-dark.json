@@ -152,40 +152,48 @@
       "settings": { "foreground": "#CA00CA" }
     },
     {
+      "scope": "mode.hypatia",
+      "settings": { "foreground": "#A59AFF" }
+    },
+    {
       "scope": "lingua.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#0FA0AF" }
     },
     {
       "scope": "alphabetum.hypatia",
-      "settings": { "foreground": "#DDDDDD" }
+      "settings": { "foreground": "#FFFFFF" }
     },
     {
       "scope": "intervalla.hypatia",
-      "settings": { "foreground": "#CCCCCC" }
+      "settings": { "foreground": "#8F8FAF" }
     },
     {
       "scope": "inclusores.hypatia",
-      "settings": { "foreground": "#BBBBBB" }
+      "settings": { "foreground": "#FFBA5A" }
     },
     {
       "scope": "lexicon.hypatia",
-      "settings": { "foreground": "#05A555" }
+      "settings": { "foreground": "#55BBAA" }
     },
     {
       "scope": "mutabilia.hypatia",
-      "settings": { "foreground": "#D5D555" }
+      "settings": { "foreground": "#E5D56F" }
     },
     {
       "scope": "sententia.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#F0F0F0" }
     },
     {
       "scope": "ratio.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#F0F0F0" }
     },
     {
       "scope": "phrase.hypatia",
-      "settings": { "foreground": "#05A555" }
+      "settings": { "foreground": "#55BBAA" }
+    },
+    {
+      "scope": "object.hypatia",
+      "settings": { "foreground": "#FFBA5A" }
     },
 
     {
@@ -194,7 +202,7 @@
     },
     {
       "scope": "string.hypatia",
-      "settings": { "foreground": "#DADADA", "fontStyle": "italic" }
+      "settings": { "foreground": "#FFBA5A", "fontStyle": "italic" }
     },
     {
       "scope": "comment.hypatia",
@@ -202,11 +210,11 @@
     },
     {
       "scope": "blob.hypatia",
-      "settings": { "foreground": "#AAAAAA", "fontStyle": "italic" }
+      "settings": { "foreground": "#AFAFAF", "fontStyle": "italic" }
     },
     {
       "scope": "error.hypatia",
-      "settings": { "foreground": "#F00F0F", "fontStyle": "italic" }
+      "settings": { "foreground": "#F00000", "fontStyle": "italic" }
     }
 
   ]

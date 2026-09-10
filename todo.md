@@ -28,6 +28,8 @@ List of tasks to be completed for the Hypatia-VSCode language-support extension.
 
 ## Done ✓
 
+- [x] Release of version v0.0.5
+      *(Done on 2026.09.??)*.
 - [x] 5th public release published (v0.0.4)
       *(Done on 2026.08.14)*.
 - [x] 4th public release published (v0.0.3)
