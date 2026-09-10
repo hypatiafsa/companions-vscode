@@ -157,7 +157,7 @@
     },
     {
       "scope": "lingua.hypatia",
-      "settings": { "foreground": "#00CACA" }
+      "settings": { "foreground": "#0FA09F" }
     },
     {
       "scope": "alphabetum.hypatia",
