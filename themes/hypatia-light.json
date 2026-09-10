@@ -174,11 +174,11 @@
     },
     {
       "scope": "intervalla.hypatia",
-      "settings": { "foreground": "#A55005" }
+      "settings": { "foreground": "#4F6A75" }
     },
     {
       "scope": "inclusores.hypatia",
-      "settings": { "foreground": "#005A7F" }
+      "settings": { "foreground": "#8F4F00" }
     },
     {
       "scope": "lexicon.hypatia",
@@ -202,28 +202,28 @@
     },
     {
       "scope": "object.hypatia",
-      "settings": { "foreground": "#8A4510" }
+      "settings": { "foreground": "#8F4F00" }
     },
 
     {
       "scope": "keyword.hypatia",
-      "settings": { "foreground": "#005FA0", "fontStyle": "bold" }
+      "settings": { "foreground": "#1A1AFF", "fontStyle": "bold" }
     },
     {
       "scope": "string.hypatia",
-      "settings": { "foreground": "#A05000", "fontStyle": "italic" }
+      "settings": { "foreground": "#8F4F00", "fontStyle": "italic" }
     },
     {
       "scope": "comment.hypatia",
-      "settings": { "foreground": "#0A7F0A", "fontStyle": "italic" }
+      "settings": { "foreground": "#2F7F30", "fontStyle": "italic" }
     },
     {
       "scope": "blob.hypatia",
-      "settings": { "foreground": "#507070", "fontStyle": "italic" }
+      "settings": { "foreground": "#707070", "fontStyle": "italic" }
     },
     {
       "scope": "error.hypatia",
-      "settings": { "foreground": "#AA0000", "fontStyle": "italic" }
+      "settings": { "foreground": "#F00000", "fontStyle": "italic" }
     }
 
   ]
