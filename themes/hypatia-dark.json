@@ -157,7 +157,7 @@
     },
     {
       "scope": "lingua.hypatia",
-      "settings": { "foreground": "#0FA09F" }
+      "settings": { "foreground": "#0FA0AF" }
     },
     {
       "scope": "alphabetum.hypatia",
@@ -173,7 +173,7 @@
     },
     {
       "scope": "lexicon.hypatia",
-      "settings": { "foreground": "#05A5A5" }
+      "settings": { "foreground": "#55BBAA" }
     },
     {
       "scope": "mutabilia.hypatia",
@@ -189,7 +189,7 @@
     },
     {
       "scope": "phrase.hypatia",
-      "settings": { "foreground": "#05A5A5" }
+      "settings": { "foreground": "#55BBAA" }
     },
     {
       "scope": "object.hypatia",
@@ -206,7 +206,7 @@
     },
     {
       "scope": "comment.hypatia",
-      "settings": { "foreground": "#8FCF7F", "fontStyle": "italic" }
+      "settings": { "foreground": "#55AA55", "fontStyle": "italic" }
     },
     {
       "scope": "blob.hypatia",
