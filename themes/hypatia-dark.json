@@ -161,7 +161,7 @@
     },
     {
       "scope": "alphabetum.hypatia",
-      "settings": { "foreground": "#DDDDDD" }
+      "settings": { "foreground": "#FFFFFF" }
     },
     {
       "scope": "intervalla.hypatia",
