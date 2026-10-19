@@ -8,6 +8,6 @@
 scripts/**
 test/**
 sources/*.ts
-build.sh
 tsconfig*.json
 *.tsbuildinfo
+Makefile

@@ -147,6 +147,23 @@ If you have a `.vsix` release file (for example from the GitHub Releases page):
   code --install-extension hypatia-<version>.vsix
   ```
 
+### Build from sources
+
+The repository provides a Makefile for the development commands.
+It requires Node.js with npm (providing `npx`), GNU Make, and Bash.
+Run these commands from the repository root, or use `make -C companions/vscode
+<target>` from the workspace root.
+
+| Command | Operation |
+| ------- | --------- |
+| `make` or `make build` | Package the extension as a VSIX file. |
+| `make install` | Package and install the extension in VSCode. |
+| `make help` | List the available commands. |
+
+The build command runs `npx @vscode/vsce package`.
+The installation command requires `code` in your `PATH` and takes the package
+name and version from `package.json` to install the corresponding VSIX file.
+
 ---
 
 ## Change Log
